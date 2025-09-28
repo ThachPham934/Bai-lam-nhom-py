@@ -1,0 +1,61 @@
+{% include 'header.html' %}
+<body style="background: #f8f9fa;">
+  <div class="container-fluid" id="main">
+    {% include 'top_menus.html' %}
+    <div class="row">
+      {% include 'left_menus.html' %}
+      <div class="col-md-9 col-lg-10 main py-4">
+        <h2 class="mb-4 font-weight-bold text-primary">Dashboard</h2>
+        <div class="row">
+          <div class="col-md-6 col-xl-3 mb-4">
+            <div class="card shadow-sm border-0 h-100">
+              <div class="card-body text-center">
+                <div class="mb-2 text-success">
+                  <i class="fa fa-book fa-3x"></i>
+                </div>
+                <h6 class="text-uppercase text-secondary">Total Books</h6>
+                <h2 class="font-weight-bold"><a href="{{ url_for('books') }}" class="text-dark">150</a></h2>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-xl-3 mb-4">
+            <div class="card shadow-sm border-0 h-100">
+              <div class="card-body text-center">
+                <div class="mb-2 text-info">
+                  <i class="fa fa-check-circle fa-3x"></i>
+                </div>
+                <h6 class="text-uppercase text-secondary">Available Books</h6>
+                <h2 class="font-weight-bold"><a href="{{ url_for('books') }}" class="text-dark">30</a></h2>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-xl-3 mb-4">
+            <div class="card shadow-sm border-0 h-100">
+              <div class="card-body text-center">
+                <div class="mb-2 text-warning">
+                  <i class="fa fa-undo fa-3x"></i>
+                </div>
+                <h6 class="text-uppercase text-secondary">Returned Books</h6>
+                <h2 class="font-weight-bold"><a href="{{ url_for('books') }}" class="text-dark">50</a></h2>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-xl-3 mb-4">
+            <div class="card shadow-sm border-0 h-100">
+              <div class="card-body text-center">
+                <div class="mb-2 text-danger">
+                  <i class="fa fa-share-square fa-3x"></i>
+                </div>
+                <h6 class="text-uppercase text-secondary">Issued Books</h6>
+                <h2 class="font-weight-bold"><a href="{{ url_for('list_issue_book') }}" class="text-dark">80</a></h2>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr>
+        <!-- Bạn có thể thêm các bảng thống kê hoặc biểu đồ ở đây nếu muốn -->
+      </div>
+    </div>
+  </div>
+</body>
+</html>
